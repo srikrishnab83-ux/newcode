@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ShopVerse | Home</title>
+
+<meta name="description"
+content="Discover amazing products across India on ShopVerse.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<link rel="stylesheet"
+href="../css/style.css">
+
+<link rel="stylesheet"
+href="../css/home.css">
+
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="mobile-header">
+
+<div class="header-top">
+
+<button class="menu-btn">
+
+<i class="fa-solid fa-bars"></i>
+
+</button>
+
+<a href="../index.html" class="logo">
+
+<i class="fa-solid fa-store"></i>
+
+<span>ShopVerse</span>
+
+</a>
+
+<div class="header-icons">
+
+<button>
+
+<i class="fa-regular fa-bell"></i>
+
+</button>
+
+<button>
+
+<i class="fa-regular fa-heart"></i>
+
+</button>
+
+<button class="cart-btn">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+<span class="cart-count">0</span>
+
+</button>
+
+<a href="profile.html">
+
+<img
+id="userPhoto"
+src="../assets/images/avatar.png"
+alt="Profile">
+
+</a>
+
+</div>
+
+</div>
+
+<!-- Search -->
+
+<div class="search-area">
+
+<div class="search-box">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+<input
+type="search"
+id="searchInput"
+placeholder="Search for products, brands and sellers">
+
+<button>
+
+Search
+
+</button>
+
+</div>
+
+</div>
+
+<!-- Delivery -->
+
+<div class="delivery-strip">
+
+<i class="fa-solid fa-location-dot"></i>
+
+Deliver to
+
+<strong id="customerDistrict">
+
+Kerala
+
+</strong>
+
+</div>
+
+</header>
+
+<!-- ================= MAIN ================= -->
+
+<main>
+
+<!-- ================= CATEGORIES ================= -->
+
+<section class="categories">
+
+<div class="section-title">
+
+<h2>
+
+Categories
+
+</h2>
+
+<a href="#">
+
+View All
+
+</a>
+
+</div>
+
+<div class="category-scroll">
+
+<div class="category-item">
+
+<div class="category-icon">
+
+📱
+
+</div>
+
+<p>Mobiles</p>
+
+</div>
+
+<div class="category-item">
+
+<div class="category-icon">
+
+👕
+
+</div>
+
+<p>Fashion</p>
+
+</div>
+
+<div class="category-item">
+
+<div class="category-icon">
+
+💻
+
+</div>
+
+<p>Electronics</p>
+
+</div>
+
+<div class="category-item">
+
+<div class="category-icon">
+
+💄
+
+</div>
+
+<p>Beauty</p>
+
+</div>
+
+<div class="category-item">
+
+<div class="category-icon">
+
+🥬
+
+</div>
+
+<p>Grocery</p>
+
+</div>
+
+<div class="category-item">
+
+<div class="category-icon">
+
+🏠
+
+</div>
+
+<p>Home</p>
+
+</div>
+
+<div class="category-item">
+
+<div class="category-icon">
+
+🎁
+
+</div>
+
+<p>Gifts</p>
+
+</div>
+
+<div class="category-item">
+
+<div class="category-icon">
+
+⌚
+
+</div>
+
+<p>Watches</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= PROMO BANNER ================= -->
+
+<section class="banner-slider">
+
+<div class="banner-card">
+
+<div class="banner-content">
+
+<span>
+
+Festival Sale
+
+</span>
+
+<h1>
+
+Up to 60% OFF
+
+</h1>
+
+<p>
+
+Top brands at unbeatable prices.
+
+</p>
+
+<a href="#">
+
+Shop Now
+
+</a>
+
+</div>
+
+<div class="banner-image">
+
+<img
+src="../assets/images/banner-phone.png"
+alt="Festival Sale">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FLASH SALE ================= -->
+
+<section class="products-section">
+
+<div class="section-title">
+
+<h2>
+
+🔥 Flash Sale
+
+</h2>
+
+<div class="countdown">
+
+02:15:30
+
+</div>
+
+</div>
+
+<div
+id="flashSaleProducts"
+class="products-grid">
+
+<!-- Firebase Products -->
+
+</div>
+
+</section>
+<!-- ================= RECOMMENDED PRODUCTS ================= -->
+
+<section class="products-section">
+
+<div class="section-title">
+
+<h2>⭐ Recommended For You</h2>
+
+<a href="#">View All</a>
+
+</div>
+
+<div id="recommendedProducts" class="products-grid">
+
+<!-- Firebase Products -->
+
+</div>
+
+</section>
+
+<!-- ================= TRENDING PRODUCTS ================= -->
+
+<section class="products-section">
+
+<div class="section-title">
+
+<h2>📈 Trending Now</h2>
+
+<a href="#">Explore</a>
+
+</div>
+
+<div id="trendingProducts" class="products-grid">
+
+<!-- Firebase Products -->
+
+</div>
+
+</section>
+
+<!-- ================= OFFER STRIP ================= -->
+
+<section class="offer-strip">
+
+<div class="offer-box">
+
+<div>
+
+<h3>🚚 FREE Delivery</h3>
+
+<p>On orders above ₹499</p>
+
+</div>
+
+<div>
+
+<h3>💳 Secure Payments</h3>
+
+<p>100% Safe Checkout</p>
+
+</div>
+
+<div>
+
+<h3>🎁 Daily Deals</h3>
+
+<p>New offers every day</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= POPULAR STORES ================= -->
+
+<section class="store-section">
+
+<div class="section-title">
+
+<h2>🏪 Popular Stores</h2>
+
+<a href="#">View All</a>
+
+</div>
+
+<div class="store-slider">
+
+<div class="store-card">
+
+<img src="../assets/images/store1.jpg" alt="Store">
+
+<h3>Kerala Mobiles</h3>
+
+<p>⭐⭐⭐⭐⭐ (4.9)</p>
+
+<span>250+ Products</span>
+
+<button>Visit Store</button>
+
+</div>
+
+<div class="store-card">
+
+<img src="../assets/images/store2.jpg" alt="Store">
+
+<h3>Fashion World</h3>
+
+<p>⭐⭐⭐⭐☆ (4.8)</p>
+
+<span>180+ Products</span>
+
+<button>Visit Store</button>
+
+</div>
+
+<div class="store-card">
+
+<img src="../assets/images/store3.jpg" alt="Store">
+
+<h3>Home Essentials</h3>
+
+<p>⭐⭐⭐⭐⭐ (4.9)</p>
+
+<span>400+ Products</span>
+
+<button>Visit Store</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= NEW ARRIVALS ================= -->
+
+<section class="products-section">
+
+<div class="section-title">
+
+<h2>🆕 New Arrivals</h2>
+
+<a href="#">View All</a>
+
+</div>
+
+<div id="newArrivalProducts" class="products-grid">
+
+<!-- Firebase -->
+
+</div>
+
+</section>
+
+<!-- ================= NEWSLETTER ================= -->
+
+<section class="newsletter">
+
+<div class="newsletter-card">
+
+<h2>Never Miss Amazing Deals</h2>
+
+<p>
+
+Subscribe to receive exclusive offers, coupons and latest arrivals.
+
+</p>
+
+<form>
+
+<input
+
+type="email"
+
+placeholder="Enter your email">
+
+<button>
+
+Subscribe
+
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+<!-- ================= FLOATING CART ================= -->
+
+<a href="cart.html" class="floating-cart">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+<span id="floatingCartCount">
+
+0
+
+</span>
+
+</a>
+
+<!-- ================= MOBILE BOTTOM NAV ================= -->
+
+<nav class="bottom-nav">
+
+<a class="active" href="home.html">
+
+<i class="fa-solid fa-house"></i>
+
+<span>Home</span>
+
+</a>
+
+<a href="categories.html">
+
+<i class="fa-solid fa-grid-2"></i>
+
+<span>Categories</span>
+
+</a>
+
+<a href="wishlist.html">
+
+<i class="fa-regular fa-heart"></i>
+
+<span>Wishlist</span>
+
+</a>
+
+<a href="cart.html">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+<span>Cart</span>
+
+</a>
+
+<a href="profile.html">
+
+<i class="fa-regular fa-user"></i>
+
+<span>Profile</span>
+
+</a>
+
+</nav>
+<!-- ================= MOBILE SIDE MENU ================= -->
+
+<aside class="side-menu" id="sideMenu">
+
+<div class="side-header">
+
+<h2>ShopVerse</h2>
+
+<button id="closeMenu">
+
+<i class="fa-solid fa-xmark"></i>
+
+</button>
+
+</div>
+
+<div class="side-user">
+
+<img src="../assets/images/avatar.png" alt="Customer">
+
+<h3 id="customerName">Customer</h3>
+
+<p id="customerEmail">customer@email.com</p>
+
+</div>
+
+<ul>
+
+<li><a href="home.html"><i class="fa-solid fa-house"></i> Home</a></li>
+
+<li><a href="orders.html"><i class="fa-solid fa-box"></i> My Orders</a></li>
+
+<li><a href="wishlist.html"><i class="fa-solid fa-heart"></i> Wishlist</a></li>
+
+<li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a></li>
+
+<li><a href="addresses.html"><i class="fa-solid fa-location-dot"></i> Addresses</a></li>
+
+<li><a href="profile.html"><i class="fa-solid fa-user"></i> Profile</a></li>
+
+<li><a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a></li>
+
+<li><a href="#" id="logoutBtn"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+
+</ul>
+
+</aside>
+
+<div class="menu-overlay" id="menuOverlay"></div>
+
+<!-- ================= QUICK VIEW MODAL ================= -->
+
+<div class="quick-view" id="quickView">
+
+<div class="quick-view-content">
+
+<button id="closeQuickView">
+
+<i class="fa-solid fa-xmark"></i>
+
+</button>
+
+<img id="quickImage" src="../assets/images/product-placeholder.png" alt="Product">
+
+<h2 id="quickTitle">Product Name</h2>
+
+<p id="quickPrice">₹999</p>
+
+<button class="primary-btn">
+
+Add To Cart
+
+</button>
+
+</div>
+
+</div>
+
+<!-- ================= NOTIFICATION PANEL ================= -->
+
+<div class="notification-panel" id="notificationPanel">
+
+<div class="notification-header">
+
+<h3>Notifications</h3>
+
+<button id="closeNotification">
+
+<i class="fa-solid fa-xmark"></i>
+
+</button>
+
+</div>
+
+<div class="notification-list">
+
+<div class="notification-item">
+
+<i class="fa-solid fa-tag"></i>
+
+<div>
+
+<h4>Festival Sale Started</h4>
+
+<p>Enjoy up to 60% OFF on selected products.</p>
+
+</div>
+
+</div>
+
+<div class="notification-item">
+
+<i class="fa-solid fa-box"></i>
+
+<div>
+
+<h4>Order Updates</h4>
+
+<p>Your recent order updates will appear here.</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="home-footer">
+
+<div class="footer-grid">
+
+<div>
+
+<h3>ShopVerse</h3>
+
+<p>
+
+India's trusted multi-vendor shopping platform.
+
+</p>
+
+</div>
+
+<div>
+
+<h4>Customer</h4>
+
+<ul>
+
+<li><a href="orders.html">Orders</a></li>
+
+<li><a href="wishlist.html">Wishlist</a></li>
+
+<li><a href="cart.html">Cart</a></li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h4>Company</h4>
+
+<ul>
+
+<li><a href="../about.html">About</a></li>
+
+<li><a href="../contact.html">Contact</a></li>
+
+<li><a href="../privacy.html">Privacy</a></li>
+
+<li><a href="../terms.html">Terms</a></li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h4>Follow Us</h4>
+
+<div class="footer-social">
+
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+
+<a href="#"><i class="fab fa-instagram"></i></a>
+
+<a href="#"><i class="fab fa-youtube"></i></a>
+
+<a href="#"><i class="fab fa-x-twitter"></i></a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+<p>
+
+© 2026 ShopVerse. All Rights Reserved.
+
+</p>
+
+</div>
+
+</footer>
+
+<!-- ================= FIREBASE ================= -->
+
+<script type="module" src="../js/firebase-config.js"></script>
+
+<script type="module" src="../js/home.js"></script>
+
+<!-- ================= APP ================= -->
+
+<script src="../js/app.js"></script>
+
+</body>
+
+</html>
