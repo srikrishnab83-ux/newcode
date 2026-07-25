@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Details | ShopVerse</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/product.css">
+</head>
+<body>
+
+<header class="mobile-header">
+    <div class="header-top">
+        <button onclick="history.back()"><i class="fa-solid fa-arrow-left"></i></button>
+        <h2>Product Details</h2>
+        <div class="header-icons">
+            <button id="wishlistBtnProduct"><i class="fa-regular fa-heart"></i></button>
+            <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i><span class="cart-count" id="cartCount">0</span></a>
+        </div>
+    </div>
+</header>
+
+<main class="product-page">
+    <div class="product-layout">
+        
+        <!-- LEFT: IMAGE GALLERY -->
+        <div class="product-gallery">
+            <img id="mainImage" src="../assets/images/product-placeholder.png" alt="Product">
+            <div class="thumb-list" id="thumbList"></div>
+        </div>
+
+        <!-- RIGHT: PRODUCT INFO -->
+        <div class="product-info">
+            <div class="product-breadcrumb">
+                <a href="home.html">Home</a> > <a href="products.html">Products</a> > <span id="breadcrumbCat">Category</span>
+            </div>
+
+            <h1 id="productName">Loading...</h1>
+            <p id="productBrand"></p>
+
+            <div class="product-rating">
+                <span>★★★★★</span>
+                <span id="productRating">(5.0)</span>
+                <a href="#reviews">12 Reviews</a>
+            </div>
+
+            <div class="product-price-box">
+                <span class="current-price" id="productPrice">₹0</span>
+                <span class="old-price" id="productOldPrice"></span>
+                <span class="discount" id="productDiscount"></span>
+            </div>
+
+            <div class="kerala-badge">
+                <i class="fa-solid fa-truck-fast"></i>
+                <div>
+                    <b>Delivery in Kerala Only</b>
+                    <p>Pincode: 67xxxx, 68xxxx, 69xxxx</p>
+                </div>
+            </div>
+
+            <div class="product-actions-main">
+                <button class="btn-cart" id="addToCartBtn"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                <button class="btn-buy" id="buyNowBtn">Buy Now</button>
+            </div>
+
+            <!-- SELLER INFO -->
+            <div class="seller-card">
+                <h4>Sold by</h4>
+                <div class="seller-info">
+                    <img id="sellerImage" src="../assets/images/store1.jpg" alt="Seller">
+                    <div>
+                        <h3 id="sellerName">Kerala Store</h3>
+                        <p><i class="fa-solid fa-location-dot"></i> <span id="sellerDistrict">Kozhikode, Kerala</span></p>
+                        <span class="seller-rating">⭐ 4.8</span>
+                    </div>
+                </div>
+                <a href="#" class="visit-store">Visit Store</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- TABS: DESCRIPTION, SPECS -->
+    <div class="product-tabs">
+        <button class="tab-btn active" data-tab="desc">Description</button>
+        <button class="tab-btn" data-tab="specs">Specifications</button>
+    </div>
+    <div class="tab-content active" id="desc">
+        <p id="productDescription">Loading description...</p>
+    </div>
+    <div class="tab-content" id="specs">
+        <ul id="productSpecs"></ul>
+    </div>
+</main>
+
+<nav class="bottom-nav">
+    <a href="home.html"><i class="fa-solid fa-house"></i><span>Home</span></a>
+    <a href="products.html"><i class="fa-solid fa-grid-2"></i><span>Shop</span></a>
+    <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i><span>Cart</span></a>
+    <a href="profile.html"><i class="fa-regular fa-user"></i><span>Profile</span></a>
+</nav>
+
+<script type="module" src="../js/firebase-config.js"></script>
+<script type="module" src="../js/product.js"></script>
+</body>
+</html>
