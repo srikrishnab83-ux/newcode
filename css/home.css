@@ -1,0 +1,1872 @@
+/*==================================================
+  SHOPVERSE HOME.CSS
+  Part 1
+  Mobile First Design
+===================================================*/
+
+
+/*==========================
+        RESET
+==========================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f5f7fb;
+    color:#222;
+    overflow-x:hidden;
+    padding-bottom:90px;
+    -webkit-font-smoothing:antialiased;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button{
+    cursor:pointer;
+    font-family:inherit;
+}
+
+input{
+    font-family:inherit;
+    outline:none;
+}
+
+
+/*==========================
+        VARIABLES
+==========================*/
+
+:root{
+
+    --primary:#5B4CF0;
+    --primary-dark:#4938e6;
+
+    --secondary:#00b894;
+
+    --danger:#ff4d4f;
+
+    --warning:#ff9800;
+
+    --bg:#f5f7fb;
+
+    --card:#ffffff;
+
+    --text:#222;
+
+    --light:#666;
+
+    --border:#e8e8e8;
+
+    --shadow:0 8px 25px rgba(0,0,0,.08);
+
+    --radius:18px;
+
+}
+
+
+
+/*==========================
+        HEADER
+==========================*/
+
+.mobile-header{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+    background:#fff;
+
+    box-shadow:0 4px 18px rgba(0,0,0,.06);
+
+}
+
+
+
+.header-top{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:10px;
+
+    padding:14px 15px;
+
+}
+
+
+
+/*==========================
+        MENU BUTTON
+==========================*/
+
+.menu-btn{
+
+    width:42px;
+
+    height:42px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#f4f4f4;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:20px;
+
+    flex-shrink:0;
+
+}
+
+.menu-btn:hover{
+
+    background:#ececec;
+
+}
+
+
+
+/*==========================
+          LOGO
+==========================*/
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    flex:1;
+
+    min-width:0;
+
+}
+
+.logo i{
+
+    color:var(--primary);
+
+    font-size:26px;
+
+}
+
+.logo span{
+
+    font-size:22px;
+
+    font-weight:700;
+
+    white-space:nowrap;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+}
+
+
+
+/*==========================
+      HEADER ICONS
+==========================*/
+
+.header-icons{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    flex-shrink:0;
+
+}
+
+
+
+.header-icons button{
+
+    width:42px;
+
+    height:42px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#f6f7fb;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    position:relative;
+
+    transition:.25s;
+
+}
+
+.header-icons button:hover{
+
+    background:#ececff;
+
+}
+
+
+
+.header-icons i{
+
+    font-size:18px;
+
+    color:#333;
+
+}
+
+
+
+/*==========================
+       BADGES
+==========================*/
+
+#notificationBadge,
+
+#wishlistBadge,
+
+#cartCount{
+
+    position:absolute;
+
+    top:-3px;
+
+    right:-3px;
+
+    width:19px;
+
+    height:19px;
+
+    border-radius:50%;
+
+    background:var(--danger);
+
+    color:#fff;
+
+    font-size:11px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-weight:600;
+
+}
+
+
+
+/*==========================
+      PROFILE IMAGE
+==========================*/
+
+#userPhoto{
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:2px solid #ececff;
+
+}
+
+
+
+/*==========================
+       SEARCH AREA
+==========================*/
+
+.search-area{
+
+    padding:0 15px 14px;
+
+}
+
+
+
+.search-box{
+
+    display:flex;
+
+    align-items:center;
+
+    width:100%;
+
+    background:#fff;
+
+    border-radius:50px;
+
+    box-shadow:0 5px 18px rgba(0,0,0,.07);
+
+    overflow:hidden;
+
+}
+
+
+
+.search-box i{
+
+    padding-left:18px;
+
+    color:#777;
+
+}
+
+
+
+#searchInput{
+
+    flex:1;
+
+    border:none;
+
+    background:transparent;
+
+    padding:15px 14px;
+
+    font-size:15px;
+
+}
+
+
+
+#searchInput::placeholder{
+
+    color:#999;
+
+}
+
+
+
+#searchBtn{
+
+    border:none;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    padding:15px 22px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    transition:.25s;
+
+    white-space:nowrap;
+
+}
+
+#searchBtn:hover{
+
+    background:var(--primary-dark);
+
+}
+
+
+
+/*==========================
+      DELIVERY STRIP
+==========================*/
+
+.delivery-strip{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    background:#eef1ff;
+
+    color:#444;
+
+    padding:12px 16px;
+
+    font-size:14px;
+
+    border-top:1px solid #eee;
+
+}
+
+
+
+.delivery-strip i{
+
+    color:var(--primary);
+
+}
+
+
+
+#customerDistrict{
+
+    color:var(--primary);
+
+}
+
+
+
+/*==========================
+       CATEGORIES
+==========================*/
+
+.categories{
+
+    padding:18px 14px;
+
+}
+
+
+
+.section-title{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    margin-bottom:16px;
+
+}
+
+
+
+.section-title h2{
+
+    font-size:20px;
+
+    font-weight:700;
+
+}
+
+
+
+.section-title a{
+
+    color:var(--primary);
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+
+
+.category-scroll{
+
+    display:flex;
+
+    gap:16px;
+
+    overflow-x:auto;
+
+    padding-bottom:8px;
+
+    scrollbar-width:none;
+
+}
+
+
+
+.category-scroll::-webkit-scrollbar{
+
+    display:none;
+
+}
+
+
+
+.category-item{
+
+    min-width:82px;
+
+    text-align:center;
+
+    cursor:pointer;
+
+}
+
+
+
+.category-icon{
+
+    width:68px;
+
+    height:68px;
+
+    margin:auto;
+
+    border-radius:22px;
+
+    background:#fff;
+
+    box-shadow:var(--shadow);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:30px;
+
+    transition:.25s;
+
+}
+
+
+
+.category-item:hover .category-icon{
+
+    transform:translateY(-4px);
+
+}
+
+
+
+.category-item p{
+
+    margin-top:10px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+
+
+/*==========================
+      HERO BANNER
+==========================*/
+
+.banner-slider{
+
+    padding:0 14px 22px;
+
+}
+
+
+
+.banner-card{
+
+    background:linear-gradient(135deg,#5B4CF0,#7b6cff);
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:24px;
+
+    color:#fff;
+
+    min-height:220px;
+
+}
+/*==================================================
+  SHOPVERSE HOME.CSS
+  Part 2
+  Products • Offers • Stores • Newsletter
+===================================================*/
+
+
+/*==========================
+      PRODUCTS SECTION
+==========================*/
+
+.products-section{
+    padding:0 14px 22px;
+}
+
+
+/*==========================
+      PRODUCT GRID
+==========================*/
+
+.products-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:14px;
+}
+
+
+/*==========================
+      PRODUCT CARD
+==========================*/
+
+.product-card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+    transition:.25s;
+
+    cursor:pointer;
+
+}
+
+.product-card:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.product-image{
+
+    position:relative;
+
+    background:#fafafa;
+
+    aspect-ratio:1/1;
+
+    overflow:hidden;
+
+}
+
+.product-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:contain;
+
+    padding:14px;
+
+}
+
+.product-badge{
+
+    position:absolute;
+
+    top:10px;
+
+    left:10px;
+
+    background:var(--danger);
+
+    color:#fff;
+
+    font-size:11px;
+
+    font-weight:600;
+
+    padding:4px 8px;
+
+    border-radius:20px;
+
+}
+
+.product-favourite{
+
+    position:absolute;
+
+    top:10px;
+
+    right:10px;
+
+    width:34px;
+
+    height:34px;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    box-shadow:0 3px 12px rgba(0,0,0,.08);
+
+}
+
+.product-content{
+
+    padding:14px;
+
+}
+
+.product-category{
+
+    font-size:12px;
+
+    color:#888;
+
+    margin-bottom:4px;
+
+}
+
+.product-title{
+
+    font-size:15px;
+
+    font-weight:600;
+
+    line-height:1.4;
+
+    height:42px;
+
+    overflow:hidden;
+
+}
+
+.product-rating{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:5px;
+
+    margin:8px 0;
+
+    font-size:13px;
+
+    color:#ff9800;
+
+}
+
+.product-price{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    margin-top:6px;
+
+}
+
+.current-price{
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:var(--primary);
+
+}
+
+.old-price{
+
+    text-decoration:line-through;
+
+    color:#999;
+
+    font-size:13px;
+
+}
+
+.discount{
+
+    color:#00a651;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.product-actions{
+
+    display:flex;
+
+    gap:10px;
+
+    margin-top:14px;
+
+}
+
+.product-actions button{
+
+    flex:1;
+
+    border:none;
+
+    border-radius:12px;
+
+    padding:10px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.add-cart{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+.buy-now{
+
+    background:#eef1ff;
+
+    color:var(--primary);
+
+}
+
+
+/*==========================
+      FLASH COUNTDOWN
+==========================*/
+
+.countdown{
+
+    background:#ffefef;
+
+    color:var(--danger);
+
+    padding:6px 12px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+}
+
+
+/*==========================
+      OFFER STRIP
+==========================*/
+
+.offer-strip{
+
+    padding:0 14px 24px;
+
+}
+
+.offer-box{
+
+    display:grid;
+
+    grid-template-columns:1fr;
+
+    gap:12px;
+
+}
+
+.offer-box div{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:18px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.offer-box h3{
+
+    font-size:16px;
+
+    margin-bottom:6px;
+
+}
+
+.offer-box p{
+
+    color:#666;
+
+    font-size:14px;
+
+}
+
+
+/*==========================
+      STORE SECTION
+==========================*/
+
+.store-section{
+
+    padding:0 14px 24px;
+
+}
+
+.store-slider{
+
+    display:flex;
+
+    gap:16px;
+
+    overflow-x:auto;
+
+    scrollbar-width:none;
+
+}
+
+.store-slider::-webkit-scrollbar{
+
+    display:none;
+
+}
+
+.store-card{
+
+    min-width:220px;
+
+    background:#fff;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+}
+
+.store-card img{
+
+    width:100%;
+
+    height:140px;
+
+    object-fit:cover;
+
+}
+
+.store-card h3{
+
+    padding:14px 14px 6px;
+
+    font-size:18px;
+
+}
+
+.store-card p{
+
+    padding:0 14px;
+
+    color:#ff9800;
+
+}
+
+.store-card span{
+
+    display:block;
+
+    padding:6px 14px 14px;
+
+    color:#666;
+
+    font-size:13px;
+
+}
+
+.store-card button{
+
+    width:calc(100% - 28px);
+
+    margin:0 14px 14px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    padding:12px;
+
+    font-weight:600;
+
+}
+
+
+/*==========================
+      NEWSLETTER
+==========================*/
+
+.newsletter{
+
+    padding:0 14px 26px;
+
+}
+
+.newsletter-card{
+
+    background:linear-gradient(135deg,#5B4CF0,#7c6bff);
+
+    color:#fff;
+
+    border-radius:24px;
+
+    padding:26px;
+
+    text-align:center;
+
+}
+
+.newsletter-card h2{
+
+    font-size:24px;
+
+    margin-bottom:12px;
+
+}
+
+.newsletter-card p{
+
+    opacity:.92;
+
+    margin-bottom:18px;
+
+    line-height:1.7;
+
+}
+
+#newsletterForm{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+#newsletterEmail{
+
+    border:none;
+
+    border-radius:14px;
+
+    padding:15px;
+
+    font-size:15px;
+
+}
+
+#newsletterForm button{
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#fff;
+
+    color:var(--primary);
+
+    padding:15px;
+
+    font-size:15px;
+
+    font-weight:700;
+
+}
+/*==================================================
+  SHOPVERSE HOME.CSS
+  Part 3
+  Footer • Side Menu • Floating Cart
+  Bottom Navigation • Quick View
+  Notification Panel • Responsive
+==================================================*/
+
+
+/*==========================
+      FLOATING CART
+==========================*/
+
+.floating-cart{
+
+    position:fixed;
+
+    right:18px;
+
+    bottom:90px;
+
+    width:58px;
+
+    height:58px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:22px;
+
+    box-shadow:0 12px 30px rgba(91,76,240,.35);
+
+    z-index:900;
+
+}
+
+#floatingCartCount{
+
+    position:absolute;
+
+    top:-5px;
+
+    right:-4px;
+
+    width:22px;
+
+    height:22px;
+
+    border-radius:50%;
+
+    background:var(--danger);
+
+    color:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:11px;
+
+    font-weight:700;
+
+}
+
+
+/*==========================
+      BOTTOM NAVIGATION
+==========================*/
+
+.bottom-nav{
+
+    position:fixed;
+
+    bottom:0;
+
+    left:0;
+
+    width:100%;
+
+    height:72px;
+
+    background:#fff;
+
+    display:flex;
+
+    justify-content:space-around;
+
+    align-items:center;
+
+    box-shadow:0 -5px 20px rgba(0,0,0,.08);
+
+    z-index:1000;
+
+}
+
+.bottom-nav a{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#777;
+
+    font-size:12px;
+
+    transition:.25s;
+
+}
+
+.bottom-nav i{
+
+    font-size:20px;
+
+    margin-bottom:4px;
+
+}
+
+.bottom-nav a.active{
+
+    color:var(--primary);
+
+    font-weight:600;
+
+}
+
+
+
+/*==========================
+      SIDE MENU
+==========================*/
+
+.side-menu{
+
+    position:fixed;
+
+    top:0;
+
+    left:-320px;
+
+    width:290px;
+
+    height:100vh;
+
+    background:#fff;
+
+    z-index:1500;
+
+    transition:.35s;
+
+    box-shadow:6px 0 24px rgba(0,0,0,.12);
+
+    overflow-y:auto;
+
+}
+
+.side-menu.active{
+
+    left:0;
+
+}
+
+.side-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px;
+
+    border-bottom:1px solid #eee;
+
+}
+
+.side-header h2{
+
+    color:var(--primary);
+
+}
+
+#closeMenu{
+
+    border:none;
+
+    background:none;
+
+    font-size:22px;
+
+}
+
+.side-user{
+
+    text-align:center;
+
+    padding:25px;
+
+}
+
+.side-user img{
+
+    width:80px;
+
+    height:80px;
+
+    border-radius:50%;
+
+    margin:auto;
+
+    object-fit:cover;
+
+    margin-bottom:12px;
+
+}
+
+.side-user h3{
+
+    font-size:20px;
+
+}
+
+.side-user p{
+
+    color:#777;
+
+    font-size:14px;
+
+}
+
+.side-menu ul{
+
+    list-style:none;
+
+    padding:10px;
+
+}
+
+.side-menu li{
+
+    margin-bottom:6px;
+
+}
+
+.side-menu a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:14px;
+
+    border-radius:14px;
+
+    transition:.25s;
+
+}
+
+.side-menu a:hover{
+
+    background:#eef1ff;
+
+    color:var(--primary);
+
+}
+
+.menu-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.3s;
+
+    z-index:1400;
+
+}
+
+.menu-overlay.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+
+
+/*==========================
+      QUICK VIEW
+==========================*/
+
+.quick-view{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:rgba(0,0,0,.5);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.3s;
+
+    z-index:1600;
+
+}
+
+.quick-view.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+.quick-view-content{
+
+    width:92%;
+
+    max-width:420px;
+
+    background:#fff;
+
+    border-radius:22px;
+
+    padding:24px;
+
+    position:relative;
+
+    text-align:center;
+
+}
+
+#closeQuickView{
+
+    position:absolute;
+
+    top:14px;
+
+    right:14px;
+
+    border:none;
+
+    background:none;
+
+    font-size:22px;
+
+}
+
+#quickImage{
+
+    width:220px;
+
+    margin:20px auto;
+
+}
+
+#quickTitle{
+
+    margin:12px 0;
+
+}
+
+#quickPrice{
+
+    color:var(--primary);
+
+    font-size:24px;
+
+    font-weight:700;
+
+    margin-bottom:18px;
+
+}
+
+#quickAddToCart{
+
+    width:100%;
+
+    border:none;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    padding:15px;
+
+    border-radius:14px;
+
+    font-weight:600;
+
+}
+
+
+
+/*==========================
+      NOTIFICATIONS
+==========================*/
+
+.notification-panel{
+
+    position:fixed;
+
+    right:-360px;
+
+    top:0;
+
+    width:330px;
+
+    height:100vh;
+
+    background:#fff;
+
+    transition:.35s;
+
+    z-index:1500;
+
+    box-shadow:-5px 0 24px rgba(0,0,0,.1);
+
+}
+
+.notification-panel.active{
+
+    right:0;
+
+}
+
+.notification-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px;
+
+    border-bottom:1px solid #eee;
+
+}
+
+.notification-header button{
+
+    border:none;
+
+    background:none;
+
+    font-size:22px;
+
+}
+
+.notification-list{
+
+    padding:18px;
+
+}
+
+.notification-item{
+
+    display:flex;
+
+    gap:14px;
+
+    margin-bottom:18px;
+
+    padding:14px;
+
+    border-radius:16px;
+
+    background:#f8f9fd;
+
+}
+
+.notification-item i{
+
+    color:var(--primary);
+
+    font-size:22px;
+
+}
+
+
+
+/*==========================
+      FOOTER
+==========================*/
+
+.home-footer{
+
+    background:#111827;
+
+    color:#fff;
+
+    padding:50px 20px 100px;
+
+}
+
+.footer-grid{
+
+    display:grid;
+
+    gap:30px;
+
+}
+
+.footer-grid h3,
+
+.footer-grid h4{
+
+    margin-bottom:14px;
+
+}
+
+.footer-grid ul{
+
+    list-style:none;
+
+}
+
+.footer-grid li{
+
+    margin-bottom:10px;
+
+}
+
+.footer-grid a{
+
+    color:#ddd;
+
+}
+
+.footer-social{
+
+    display:flex;
+
+    gap:12px;
+
+}
+
+.footer-social a{
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:50%;
+
+    background:#1d293d;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.footer-bottom{
+
+    margin-top:30px;
+
+    text-align:center;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    padding-top:18px;
+
+    color:#aaa;
+
+}
+
+
+
+/*==========================
+      RESPONSIVE
+==========================*/
+
+@media (max-width:480px){
+
+.products-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.banner-card{
+
+flex-direction:column;
+
+text-align:center;
+
+padding:20px;
+
+min-height:auto;
+
+}
+
+.banner-image{
+
+margin-top:18px;
+
+}
+
+.store-card{
+
+min-width:190px;
+
+}
+
+.logo span{
+
+font-size:18px;
+
+}
+
+#searchBtn{
+
+padding:14px 16px;
+
+font-size:13px;
+
+}
+
+}
+
+
+
+@media (min-width:481px) and (max-width:768px){
+
+.products-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+
+
+@media (min-width:769px){
+
+.mobile-header{
+
+padding:0 40px;
+
+}
+
+main{
+
+max-width:1400px;
+
+margin:auto;
+
+}
+
+.products-grid{
+
+grid-template-columns:repeat(4,1fr);
+
+}
+
+.footer-grid{
+
+grid-template-columns:repeat(4,1fr);
+
+}
+
+.offer-box{
+
+grid-template-columns:repeat(3,1fr);
+
+}
+
+}
+
+
+
+/*==========================
+      ANIMATIONS
+==========================*/
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(20px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+.product-card,
+
+.banner-card,
+
+.store-card,
+
+.offer-box div{
+
+animation:fadeUp .5s ease;
+
+}
