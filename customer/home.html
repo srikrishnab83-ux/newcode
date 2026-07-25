@@ -9,7 +9,7 @@
 <title>ShopVerse | Home</title>
 
 <meta name="description"
-content="Discover amazing products across India on ShopVerse.">
+content="Discover amazing products from trusted sellers across Kerala.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 
@@ -39,7 +39,7 @@ href="../css/home.css">
 
 <div class="header-top">
 
-<button class="menu-btn">
+<button class="menu-btn" id="menuBtn">
 
 <i class="fa-solid fa-bars"></i>
 
@@ -55,23 +55,27 @@ href="../css/home.css">
 
 <div class="header-icons">
 
-<button>
+<button id="notificationBtn">
 
 <i class="fa-regular fa-bell"></i>
 
+<span id="notificationBadge">0</span>
+
 </button>
 
-<button>
+<button id="wishlistBtn">
 
 <i class="fa-regular fa-heart"></i>
 
+<span id="wishlistBadge">0</span>
+
 </button>
 
-<button class="cart-btn">
+<button class="cart-btn" id="cartBtn">
 
-<i class="fa-solid fa-cart-shopping"></i>
+    <i class="fa-solid fa-cart-shopping"></i>
 
-<span class="cart-count">0</span>
+    <span class="cart-count" id="cartCount">0</span>
 
 </button>
 
@@ -101,7 +105,7 @@ type="search"
 id="searchInput"
 placeholder="Search for products, brands and sellers">
 
-<button>
+<button id="searchBtn">
 
 Search
 
@@ -155,7 +159,9 @@ View All
 
 <div class="category-scroll">
 
-<div class="category-item">
+<div
+class="category-item"
+data-category="mobiles">
 
 <div class="category-icon">
 
@@ -167,7 +173,7 @@ View All
 
 </div>
 
-<div class="category-item">
+<div class="category-item" data-category="fashion">
 
 <div class="category-icon">
 
@@ -179,7 +185,7 @@ View All
 
 </div>
 
-<div class="category-item">
+<div class="category-item" data-category="electronics">
 
 <div class="category-icon">
 
@@ -191,7 +197,7 @@ View All
 
 </div>
 
-<div class="category-item">
+<div class="category-item" data-category="beauty">
 
 <div class="category-icon">
 
@@ -203,7 +209,7 @@ View All
 
 </div>
 
-<div class="category-item">
+<div class="category-item" data-category="grocery">
 
 <div class="category-icon">
 
@@ -215,7 +221,7 @@ View All
 
 </div>
 
-<div class="category-item">
+<div class="category-item" data-category="home">  
 
 <div class="category-icon">
 
@@ -227,7 +233,7 @@ View All
 
 </div>
 
-<div class="category-item">
+<div class="category-item" data-category="gifts">
 
 <div class="category-icon">
 
@@ -239,7 +245,7 @@ View All
 
 </div>
 
-<div class="category-item">
+<div class="category-item" data-category="watches">
 
 <div class="category-icon">
 
@@ -257,9 +263,9 @@ View All
 
 <!-- ================= PROMO BANNER ================= -->
 
-<section class="banner-slider">
+<section class="banner-slider" id="bannerSlider">
 
-<div class="banner-card">
+<div class="banner-card hero-slide active">
 
 <div class="banner-content">
 
@@ -498,19 +504,16 @@ Subscribe to receive exclusive offers, coupons and latest arrivals.
 
 </p>
 
-<form>
+<form id="newsletterForm">
 
-<input
+    <input
+        id="newsletterEmail"
+        type="email"
+        placeholder="Enter your email">
 
-type="email"
-
-placeholder="Enter your email">
-
-<button>
-
-Subscribe
-
-</button>
+    <button>
+        Subscribe
+    </button>
 
 </form>
 
@@ -520,7 +523,10 @@ Subscribe
 
 <!-- ================= FLOATING CART ================= -->
 
-<a href="cart.html" class="floating-cart">
+<a
+id="floatingCart"
+href="cart.html"
+class="floating-cart">
 
 <i class="fa-solid fa-cart-shopping"></i>
 
@@ -645,7 +651,9 @@ Subscribe
 
 <p id="quickPrice">₹999</p>
 
-<button class="primary-btn">
+<button
+class="primary-btn"
+id="quickAddToCart">
 
 Add To Cart
 
@@ -717,7 +725,7 @@ Add To Cart
 
 <p>
 
-India's trusted multi-vendor shopping platform.
+Kerala's trusted multi-vendor shopping platform
 
 </p>
 
