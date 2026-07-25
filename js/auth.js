@@ -320,7 +320,7 @@ if (loginForm) {
 
                     case "customer":
 
-                       window.location.href = "customer/dashboard.html";
+                       window.location.href = "customer/home.html";
 
                         break;
 
@@ -460,7 +460,7 @@ onAuthStateChanged(auth, async (user) => {
 
                 case "customer":
 
-                    window.location.href = "customer/dashboard.html";
+                    window.location.href = "customer/home.html";
 
                     break;
 
