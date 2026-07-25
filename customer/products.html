@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Products | ShopVerse Kerala</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/products.css">
+</head>
+<body>
+
+<header class="mobile-header">
+    <div class="header-top">
+        <button onclick="window.location.href='home.html'"><i class="fa-solid fa-arrow-left"></i></button>
+        <h2>All Products</h2>
+        <div class="header-icons">
+            <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i><span class="cart-count" id="cartCount">0</span></a>
+        </div>
+    </div>
+    <div class="search-bar">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="searchInput" placeholder="Search in Kerala products...">
+    </div>
+</header>
+
+<main class="products-page">
+    <div class="products-layout">
+        
+        <!-- LEFT: FILTERS -->
+        <aside class="filters-sidebar">
+            <div class="filter-header">
+                <h3>Filters</h3>
+                <button id="clearFilters">Clear All</button>
+            </div>
+
+            <div class="filter-group">
+                <h4>Categories</h4>
+                <label><input type="radio" name="category" value="all" checked> All</label>
+                <label><input type="radio" name="category" value="mobiles"> Mobiles</label>
+                <label><input type="radio" name="category" value="fashion"> Fashion</label>
+                <label><input type="radio" name="category" value="electronics"> Electronics</label>
+                <label><input type="radio" name="category" value="home"> Home & Kitchen</label>
+            </div>
+
+            <div class="filter-group">
+                <h4>Price Range</h4>
+                <input type="range" id="priceRange" min="0" max="50000" value="50000" step="500">
+                <div class="price-values">
+                    <span>₹0</span>
+                    <span id="priceValue">₹50,000</span>
+                </div>
+            </div>
+
+            <div class="kerala-info">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>Showing products available for <b>Kerala Delivery Only</b></p>
+            </div>
+
+        </aside>
+
+        <!-- RIGHT: PRODUCTS GRID -->
+        <div class="products-main">
+            <div class="products-topbar">
+                <p id="productCount">(0) Products</p>
+                <select id="sortSelect">
+                    <option value="new">Sort by: Newest</option>
+                    <option value="low">Price: Low to High</option>
+                    <option value="high">Price: High to Low</option>
+                    <option value="discount">Discount</option>
+                </select>
+            </div>
+
+            <div id="productsGrid" class="products-grid">
+                <!-- Products load here -->
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<nav class="bottom-nav">
+    <a href="home.html"><i class="fa-solid fa-house"></i><span>Home</span></a>
+    <a href="products.html" class="active"><i class="fa-solid fa-grid-2"></i><span>Shop</span></a>
+    <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i><span>Cart</span></a>
+    <a href="profile.html"><i class="fa-regular fa-user"></i><span>Profile</span></a>
+</nav>
+
+<script type="module" src="../js/firebase-config.js"></script>
+<script type="module" src="../js/products.js"></script>
+</body>
+</html>
