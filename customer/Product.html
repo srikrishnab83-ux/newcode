@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Product Details | ShopVerse</title>
+<title>Product Details | ShopVerse Kerala</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
@@ -15,7 +15,7 @@
 
 <header class="mobile-header">
     <div class="header-top">
-        <button onclick="history.back()"><i class="fa-solid fa-arrow-left"></i></button>
+        <button onclick="window.location.href='products.html'"><i class="fa-solid fa-arrow-left"></i></button>
         <h2>Product Details</h2>
         <div class="header-icons">
             <button id="wishlistBtnProduct"><i class="fa-regular fa-heart"></i></button>
@@ -36,7 +36,9 @@
         <!-- RIGHT: PRODUCT INFO -->
         <div class="product-info">
             <div class="product-breadcrumb">
-                <a href="home.html">Home</a> > <a href="products.html">Products</a> > <span id="breadcrumbCat">Category</span>
+                <a href="home.html">Home</a> > 
+                <a href="products.html">Products</a> > 
+                <span id="breadcrumbCat">Category</span>
             </div>
 
             <h1 id="productName">Loading...</h1>
@@ -45,7 +47,7 @@
             <div class="product-rating">
                 <span>★★★★★</span>
                 <span id="productRating">(5.0)</span>
-                <a href="#reviews">12 Reviews</a>
+                <span>12 Reviews</span>
             </div>
 
             <div class="product-price-box">
@@ -57,9 +59,15 @@
             <div class="kerala-badge">
                 <i class="fa-solid fa-truck-fast"></i>
                 <div>
-                    <b>Delivery in Kerala Only</b>
-                    <p>Pincode: 67xxxx, 68xxxx, 69xxxx</p>
+                    <b>Guaranteed Delivery in Kerala Only</b>
+                    <p>We deliver to pincodes: 67xxxx, 68xxxx, 69xxxx</p>
                 </div>
+            </div>
+
+            <div class="pincode-check">
+                <input type="text" id="pincodeInput" placeholder="Enter Pincode" maxlength="6">
+                <button id="checkPincodeBtn">Check</button>
+                <p id="pincodeResult"></p>
             </div>
 
             <div class="product-actions-main">
@@ -69,21 +77,20 @@
 
             <!-- SELLER INFO -->
             <div class="seller-card">
-                <h4>Sold by</h4>
+                <h4>Sold by Kerala Seller</h4>
                 <div class="seller-info">
                     <img id="sellerImage" src="../assets/images/store1.jpg" alt="Seller">
                     <div>
                         <h3 id="sellerName">Kerala Store</h3>
                         <p><i class="fa-solid fa-location-dot"></i> <span id="sellerDistrict">Kozhikode, Kerala</span></p>
-                        <span class="seller-rating">⭐ 4.8</span>
+                        <span class="seller-rating">⭐ 4.8 Seller Rating</span>
                     </div>
                 </div>
-                <a href="#" class="visit-store">Visit Store</a>
             </div>
         </div>
     </div>
 
-    <!-- TABS: DESCRIPTION, SPECS -->
+    <!-- TABS -->
     <div class="product-tabs">
         <button class="tab-btn active" data-tab="desc">Description</button>
         <button class="tab-btn" data-tab="specs">Specifications</button>
@@ -94,6 +101,13 @@
     <div class="tab-content" id="specs">
         <ul id="productSpecs"></ul>
     </div>
+
+    <!-- RELATED PRODUCTS FROM KERALA -->
+    <section class="related-products">
+        <h2>More from Kerala Sellers</h2>
+        <div id="relatedGrid" class="products-grid"></div>
+    </section>
+
 </main>
 
 <nav class="bottom-nav">
